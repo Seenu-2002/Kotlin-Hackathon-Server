@@ -18,6 +18,9 @@ object UserRepository {
 
     fun createOrGetUser(name: String, email: String): User {
         var userId: Int = 0
+        getUsers().find { it.name == name && it.email == email }?.let {
+            return it
+        }
         transaction {
             userId = Users.insertAndGetId {
                 it[Users.name] = name
