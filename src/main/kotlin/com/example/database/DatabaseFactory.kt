@@ -15,7 +15,7 @@ object DatabaseFactory {
             driverClassName = "com.mysql.cj.jdbc.Driver"
             jdbcUrl = "jdbc:mysql://localhost:3306/KOTLIN_HACKATHON"
             username = "root"
-            password = "" // password
+            password = "SeeNu@1603" // password
             maximumPoolSize = 10
             isAutoCommit = false
             transactionIsolation = "TRANSACTION_REPEATABLE_READ"
