@@ -1,5 +1,6 @@
 package com.example.plugins
 
+import com.example.database.repository.TripRepository
 import com.example.database.repository.UserRepository
 import io.ktor.http.*
 import io.ktor.server.application.*
@@ -14,6 +15,11 @@ fun Application.configureRouting() {
         get("/users") {
             val users = UserRepository.getUsers()
             call.respond(users)
+        }
+
+        get("/trips"){
+            val trips = TripRepository.getAllTrips()
+            call.respond(trips)
         }
 
         post("/users") {
