@@ -1,6 +1,7 @@
 package com.example
 
-import com.example.plugins.*
+import com.example.database.DatabaseFactory
+import com.example.plugins.configureRouting
 import io.ktor.server.application.*
 import io.ktor.server.engine.*
 import io.ktor.server.tomcat.jakarta.*
@@ -12,4 +13,5 @@ fun main() {
 
 fun Application.module() {
     configureRouting()
+    DatabaseFactory.init()
 }
